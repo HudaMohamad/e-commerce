@@ -1,0 +1,469 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+
+:root {
+  --main_color: #0090f0;
+  --p_coloe: #7b7b7b;
+  --bg_color: #fff;
+  --color_heading: #253237;
+  --border_color: #d6d6d6d5;
+}
+
+
+body {
+  background: var(--bg_color);
+  font-family: "DM Sans", sans-serif;
+  padding-top: 140px;
+}
+
+
+img {
+  width: 100%;
+  display: block;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--color_heading);
+  font-family: "Noto Sans Display", sans-serif;
+}
+
+
+span {
+  color: var(--main_color);
+}
+
+
+p {
+  color: var(--p_coloe);
+}
+
+
+button {
+  border: none;
+  outline: none;
+}
+
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 1350px;
+}
+
+
+/* =====================================
+   PRODUCT DETAILS
+===================================== */
+
+.product_details {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  gap: 50px;
+
+  padding: 30px 0;
+}
+
+
+/* =====================================
+   IMAGES SECTION
+===================================== */
+
+.imges_item {
+  width: 50%;
+}
+
+
+.big_images {
+  width: 90%;
+  height: 450px;
+
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #fff;
+}
+
+
+.big_images img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+
+  padding: 20px;
+}
+
+
+/* =====================================
+   SMALL IMAGES
+===================================== */
+
+.sm_images {
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  margin-top: 20px;
+
+  flex-wrap: wrap;
+}
+
+
+.sm_images img {
+  width: 80px;
+  height: 80px;
+
+  object-fit: contain;
+
+  padding: 8px;
+
+  border: 1px solid var(--border_color);
+  border-radius: 10px;
+
+  cursor: pointer;
+
+  background: #fff;
+
+  transition: 0.3s;
+}
+
+
+.sm_images img:hover {
+  border-color: var(--main_color);
+
+  transform: translateY(-3px);
+}
+
+
+/* =====================================
+   DETAILS SECTION
+===================================== */
+
+.details_item {
+  width: 50%;
+
+  padding: 20px 0;
+}
+
+
+.details_item h1 {
+  font-size: 35px;
+
+  line-height: 1.3;
+
+  margin-bottom: 20px;
+}
+
+
+/* =====================================
+   STARS
+===================================== */
+
+.details_item .stars {
+  display: flex;
+  align-items: center;
+
+  gap: 5px;
+
+  margin-bottom: 25px;
+}
+
+
+.details_item .stars svg {
+  color: #ffc107;
+
+  font-size: 20px;
+}
+
+
+/* =====================================
+   PRICE
+===================================== */
+
+.prise {
+  color: var(--main_color);
+
+  font-size: 32px;
+
+  font-weight: 700;
+
+  margin-bottom: 25px;
+}
+
+
+/* =====================================
+   PRODUCT INFORMATION
+===================================== */
+
+.product_info {
+  border-top: 1px solid var(--border_color);
+
+  border-bottom: 1px solid var(--border_color);
+
+  padding: 15px 0;
+}
+
+
+.product_info h5 {
+  font-size: 16px;
+
+  font-weight: 500;
+
+  margin: 12px 0;
+}
+
+
+.product_info span {
+  margin-left: 8px;
+
+  font-weight: 600;
+}
+
+
+/* =====================================
+   DESCRIPTION
+===================================== */
+
+.desc {
+  font-size: 16px;
+
+  line-height: 1.8;
+
+  margin: 25px 0;
+}
+
+
+/* =====================================
+   PRODUCT ACTIONS
+===================================== */
+
+.product_actions {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  margin-top: 25px;
+}
+
+
+/* =====================================
+   ADD TO CART
+===================================== */
+.add_to_cart {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 13px 25px;
+  background: var(--main_color);
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: 0.3s;
+  border: 2px solid transparent; /* ضفنا هاد السطر */
+}
+
+.add_to_cart.in-cart {
+  background: #fff;
+  color: var(--main_color);
+  border-color: var(--main_color);
+  pointer-events: none;
+}
+
+
+
+
+.add_to_cart svg {
+  font-size: 20px;
+}
+
+
+.add_to_cart:hover {
+  transform: scale(1.05);
+
+  background: #007dcc;
+}
+
+
+/* =====================================
+   FAVORITE & SHARE BUTTON
+===================================== */
+
+.action_icon {
+  width: 48px;
+
+  height: 48px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border: 1px solid var(--border_color);
+
+  border-radius: 50%;
+
+  background: #fff;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+
+.action_icon svg {
+  font-size: 19px;
+}
+
+
+/* =====================================
+   FAVORITE (تم تعديله ليصبح مثل الـ Share)
+===================================== */
+
+.favorite {
+  color: var(--main_color);         /* كان أحمر (#ff4d6867) */
+}
+
+
+.favorite:hover {
+  background: var(--main_color);    /* كان أحمر (#ff4d689d) */
+  color: #fff;
+  border-color: var(--main_color);  /* كان أحمر (#ff4d6862) */
+  transform: scale(1.08);
+}
+
+
+/* =====================================
+   SHARE
+===================================== */
+
+.share {
+  color: var(--main_color);
+}
+
+
+.share:hover {
+  background: var(--main_color);
+  color: #fff;
+  border-color: var(--main_color);
+  transform: scale(1.08);
+}
+
+
+/* =====================================
+   RESPONSIVE - TABLET
+===================================== */
+
+@media (max-width: 900px) {
+
+  .product_details {
+    flex-direction: column;
+
+    gap: 30px;
+  }
+
+
+  .imges_item,
+  .details_item {
+    width: 100%;
+  }
+
+
+  .details_item {
+    padding: 10px 0;
+  }
+
+}
+
+                      
+ .product_actions .action_icon span.in-fav {
+    background: var(--main_color) !important;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    transition: all 0.3s ease;
+}
+
+.product_actions .action_icon span.in-fav svg {
+    fill: #fff !important;
+    color: #fff !important;
+}
+/* =====================================
+   RESPONSIVE - MOBILE
+===================================== */
+
+@media (max-width: 600px) {
+
+  body {
+    padding-top: 120px;
+  }
+
+
+  .container {
+    width: 92%;
+  }
+
+
+  .big_images {
+    height: 350px;
+  }
+
+
+  .details_item h1 {
+    font-size: 27px;
+  }
+
+
+  .prise {
+    font-size: 28px;
+  }
+
+
+  .sm_images img {
+    width: 65px;
+
+    height: 65px;
+  }
+
+
+  .product_actions {
+    flex-wrap: wrap;
+  }
+
+
+  .add_to_cart {
+    padding: 12px 20px;
+  }
+
+
+  .action_icon {
+    width: 45px;
+
+    height: 45px;
+  }
+
+}

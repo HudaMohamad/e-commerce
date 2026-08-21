@@ -1,0 +1,178 @@
+/* ==========================================
+   Base shimmer block
+   ========================================== */
+.skeleton {
+  position: relative;
+  overflow: hidden;
+  background: var(--code-bg, #eee);
+  border-radius: 6px;
+}
+
+.skeleton::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  transform: translateX(-100%);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.55) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  animation: skeleton_shimmer 1.4s ease-in-out infinite;
+}
+
+@media (prefers-color-scheme: dark) {
+  .skeleton::after {
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0.08) 50%,
+      rgba(255, 255, 255, 0) 100%
+    );
+  }
+}
+
+@keyframes skeleton_shimmer {
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .skeleton::after {
+    animation: none;
+  }
+}
+
+/* ==========================================
+   Product card skeleton (matches .prodect)
+   ========================================== */
+.skeleton_card {
+  width: 240px;
+  padding: 20px 15px;
+  border: 1px solid var(--border, #d6d6d6d5);
+  border-radius: 8px;
+  box-sizing: border-box;
+  margin: 8px 0;
+  background: transparent;
+}
+
+.skeleton_card .skeleton_img {
+  height: 180px;
+  margin-bottom: 30px;
+  border-radius: 8px;
+}
+
+.skeleton_card .skeleton_title {
+  height: 16px;
+  width: 85%;
+  margin-bottom: 14px;
+}
+
+.skeleton_card .skeleton_stars {
+  height: 14px;
+  width: 60%;
+  margin-bottom: 15px;
+}
+
+.skeleton_card .skeleton_price {
+  height: 20px;
+  width: 40%;
+}
+
+@media (max-width: 768px) {
+  .skeleton_card {
+    width: 230px;
+  }
+}
+
+@media (max-width: 500px) {
+  .skeleton_card {
+    width: 210px;
+  }
+}
+
+/* ==========================================
+   Grid of card skeletons
+   ========================================== */
+.skeleton_grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px 0;
+}
+
+/* ==========================================
+   Product details page skeleton
+   ========================================== */
+.skeleton_details {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 50px;
+  padding: 30px 0;
+  flex-wrap: wrap;
+}
+
+.skeleton_details_images {
+  flex: 1 1 380px;
+  min-width: 280px;
+}
+
+.skeleton_details_main_img {
+  width: 100%;
+  height: 380px;
+  margin-bottom: 16px;
+  border-radius: 10px;
+}
+
+.skeleton_details_thumbs {
+  display: flex;
+  gap: 12px;
+}
+
+.skeleton_details_thumb {
+  width: 70px;
+  height: 70px;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+.skeleton_details_info {
+  flex: 1 1 380px;
+  min-width: 280px;
+}
+
+.skeleton_details_info .skeleton_line {
+  height: 16px;
+  border-radius: 6px;
+  margin-bottom: 14px;
+}
+
+.skeleton_details_info .skeleton_line.w-90 {
+  width: 90%;
+  height: 26px;
+}
+.skeleton_details_info .skeleton_line.w-40 {
+  width: 40%;
+}
+.skeleton_details_info .skeleton_line.w-30 {
+  width: 30%;
+  height: 28px;
+  margin: 20px 0;
+}
+.skeleton_details_info .skeleton_line.w-100 {
+  width: 100%;
+}
+.skeleton_details_info .skeleton_line.w-70 {
+  width: 70%;
+}
+
+.skeleton_details_info .skeleton_btn {
+  height: 46px;
+  width: 180px;
+  border-radius: 8px;
+  margin-top: 24px;
+}

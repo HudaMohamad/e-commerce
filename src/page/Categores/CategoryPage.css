@@ -1,0 +1,20 @@
+.gategory_products {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.containrt {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.products {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
