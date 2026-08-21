@@ -2,8 +2,8 @@ import { useEffect, useState } from "react";
 import { FiMenu } from "react-icons/fi";
 import { IoIosArrowDown } from "react-icons/io";
 import { Link, useLocation } from "react-router-dom";
-import { PiSignInBold } from "react-icons/pi";
-import { FaUserPlus } from "react-icons/fa6";
+// import { PiSignInBold } from "react-icons/pi";
+// import { FaUserPlus } from "react-icons/fa6";
 import "./Header.css";
 
 const nav_links = [
@@ -79,7 +79,7 @@ useEffect(() => {
         </nav>
 
         {/* Login & Register */}
-        <div className="sign_regs_icon">
+        {/* <div className="sign_regs_icon">
           <Link to="/login">
             <PiSignInBold />
           </Link>
@@ -87,7 +87,7 @@ useEffect(() => {
           <Link to="/register">
             <FaUserPlus />
           </Link>
-        </div>
+        </div> */}
 
       </div>
     </div>
