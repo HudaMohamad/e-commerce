@@ -7,7 +7,7 @@ import { CartProvider } from './components/context/CartContext.jsx';   // است
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename="/e-commerce">
       <CartProvider>
         <App />
       </CartProvider>
