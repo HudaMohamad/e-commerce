@@ -70,28 +70,6 @@ function About() {
           </div>
         </div>
 
-        {/* Story */}
-        <div className="container about_story">
-          <div className="top_slide">
-            <h2>Our Story</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-          </div>
-          <div className="about_story_grid">
-            <p>
-              What started as a small idea has grown into a store trusted by
-              thousands of shoppers. We believe technology and everyday
-              accessories should be easy to find, fairly priced, and simple
-              to buy — without the guesswork.
-            </p>
-            <p>
-              Today we work with a growing list of trusted brands to bring
-              you smartphones, laptops, tablets, watches, and accessories,
-              all carefully organized and ready to ship. Our mission is
-              simple: make online shopping feel effortless, from browsing to
-              checkout.
-            </p>
-          </div>
-        </div>
 
         {/* Features */}
         <div className="about_features">
