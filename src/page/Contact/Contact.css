@@ -4,10 +4,11 @@
 }
 
 .contact_hero {
-  background: #f7f9fb;
+  background: #f1f5f9;
   padding: 50px 0;
   margin-bottom: 40px;
   text-align: center;
+  border-radius: 16px;
 }
 
 .contact_hero h4 {
@@ -40,15 +41,18 @@
 
 .contact_info_card {
   flex: 1 1 220px;
-  border: 1px solid var(--border_color);
-  border-radius: 10px;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 14px;
   padding: 28px 22px;
-  transition: 0.3s;
+  background: #fff;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  transition: transform 0.22s, box-shadow 0.22s, border-color 0.22s;
 }
 
 .contact_info_card:hover {
-  border-color: var(--main_color);
+  border-color: #2563eb;
   transform: translateY(-4px);
+  box-shadow: 0 10px 24px rgba(37,99,235,0.1);
 }
 
 .contact_info_icon {
@@ -58,8 +62,8 @@
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  background: rgba(0, 144, 240, 0.1);
-  color: var(--main_color);
+  background: #eff6ff;
+  color: #2563eb;
   font-size: 20px;
   margin-bottom: 14px;
 }
@@ -75,9 +79,11 @@
 }
 
 .contact_form_wrap {
-  border: 1px solid var(--border_color);
-  border-radius: 12px;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 16px;
   padding: 40px;
+  background: #fff;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
 }
 
 .contact_form .form_row {
@@ -101,19 +107,22 @@
 
 .contact_form input,
 .contact_form textarea {
-  border: 1px solid var(--border_color);
-  border-radius: 6px;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 10px;
   padding: 12px 14px;
-  font-family: "DM Sans", sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 14px;
-  color: var(--color_heading);
+  color: #0f172a;
+  background: #f8fafc;
   resize: vertical;
-  transition: 0.3s;
+  transition: border-color 0.2s, box-shadow 0.2s;
 }
 
 .contact_form input:focus,
 .contact_form textarea:focus {
-  border-color: var(--main_color);
+  border-color: #2563eb;
+  background: #fff;
+  box-shadow: 0 0 0 3px rgba(37,99,235,0.1);
 }
 
 .contact_form .btn {

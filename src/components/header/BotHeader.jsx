@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { FiMenu } from "react-icons/fi";
 import { IoIosArrowDown } from "react-icons/io";
 import { Link, useLocation } from "react-router-dom";
@@ -18,15 +18,21 @@ function BotHeader() {
   const location = useLocation();
   const [categories, setCategories] = useState([]);
   const [isCategoryOPen, setIsCategoreOpen] = useState(false);
+  const categoryRef = useRef(null);
 
-
-useEffect(() => {
-  const closeCategory = () => {
+  useEffect(() => {
     setIsCategoreOpen(false);
-  };
+  }, [location]);
 
-  closeCategory();
-}, [location]);
+  useEffect(() => {
+    const handleClickOutside = (e) => {
+      if (categoryRef.current && !categoryRef.current.contains(e.target)) {
+        setIsCategoreOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
 
 
   useEffect(() => {
@@ -41,7 +47,7 @@ useEffect(() => {
       <div className="container">
 
         {/* Categories */}
-        <div className="category_nav">
+        <div className="category_nav" ref={categoryRef}>
           <div
             className="category_btn"
             onClick={() => setIsCategoreOpen(!isCategoryOPen)}

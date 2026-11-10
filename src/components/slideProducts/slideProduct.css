@@ -1,290 +1,260 @@
 :root {
-    --main_color: #0090f0;
-    --p_coloe: #7b7b7b;
-    --bg_color: #fff;
-    --color_heading: #253237;
-    --border_color: #d6d6d6d5;
+  --accent:        #2563eb;
+  --accent-dark:   #1d4ed8;
+  --accent-light:  #eff6ff;
+  --text-primary:  #0f172a;
+  --text-secondary:#64748b;
+  --bg:            #f1f5f9;
+  --surface:       #ffffff;
+  --border:        #e2e8f0;
+  --shadow-sm:     0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
+  --shadow-md:     0 4px 12px rgba(0,0,0,0.08), 0 2px 4px rgba(0,0,0,0.04);
 
+  --main_color:   #2563eb;
+  --bg_color:     #ffffff;
+  --border_color: #e2e8f0;
+  --color_heading:#0f172a;
+  --p_coloe:      #64748b;
 }
 
-.slide_products {
-    padding: 50px 0;
-}
+/* ── Section wrapper ── */
+.slide_products { padding: 48px 0; }
 
+/* ── Section header ── */
 .top_slide {
-    position: relative;
-    margin-bottom: 20px;
-    border-bottom: 1px solid var(--border_color);
-    padding: 15px 20px 20px 0;
+  position: relative;
+  margin-bottom: 24px;
+  padding-bottom: 14px;
+  border-bottom: 1.5px solid var(--border);
 }
 
 .top_slide::after {
-    content: '';
-    position: absolute;
-    bottom: -1px;
-    width: 100px;
-    height: 2px;
-    background: var(--main_color);
+  content: '';
+  position: absolute;
+  bottom: -1.5px;
+  left: 0;
+  width: 60px;
+  height: 2.5px;
+  background: var(--accent);
+  border-radius: 2px;
 }
 
 .top_slide h2 {
-    font-size: 30px;
-    color: var(--main_color);
-    margin-bottom: 10px;
-    text-transform: capitalize;
+  font-size: 22px;
+  color: var(--text-primary);
+  font-weight: 700;
+  text-transform: capitalize;
 }
 
-/* product */
-
-
-/* ==========================================
+/* ══════════════════════════════════════
    Product Card
-   ========================================== */
-
+══════════════════════════════════════ */
 .prodect {
-    width: 240px;
-    background: #fff;
-    padding: 20px 15px;
-    border: 1px solid var(--border_color);
-    transition: 0.3s;
-    border-radius: 8px;
-    position: relative;
-    overflow: hidden;
-    box-sizing: border-box;
-    margin: 8px 0;
+  width: 210px;
+  background: var(--surface);
+  padding: 16px 14px 18px;
+  border: 1.5px solid var(--border);
+  border-radius: 14px;
+  transition: transform 0.22s, box-shadow 0.22s, border-color 0.22s;
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+  margin: 6px 0;
 }
 
-
-/* Hover */
 .prodect:hover {
-    border-color: var(--main_color);
-    box-shadow: 10px 10px 15px #94949436;
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(37,99,235,0.12);
+  border-color: var(--accent);
 }
 
-
-/* Product Image */
+/* ── Image ── */
 .prodect .img_product {
-    position: relative;
-    height: 180px;
-    padding: 0 20px;
-    margin-bottom: 30px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  position: relative;
+  height: 170px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg);
+  border-radius: 10px;
+  margin-bottom: 14px;
+  overflow: hidden;
 }
-
 
 .prodect .img_product img {
-    height: 160px;
-    width: auto;
-    max-width: 100%;
-    object-fit: contain;
+  height: 140px;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+  transition: transform 0.3s;
 }
 
+.prodect:hover .img_product img { transform: scale(1.06); }
 
-/* Product Name */
+/* ── Name ── */
 .prodect .name_product {
-    margin-bottom: 10px;
-    color: var(--color_heading);
-
-    overflow: hidden;
-    text-overflow: ellipsis;
-
-    display: -webkit-box;
-    -webkit-line-clamp: 1;
-    -webkit-box-orient: vertical;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
 }
 
-
-/* Stars */
+/* ── Stars ── */
 .prodect .stars {
-    margin: 15px 0;
-
-    display: flex;
-    gap: 5px;
+  display: flex;
+  gap: 3px;
+  margin: 8px 0;
 }
 
+.prodect .stars svg { fill: #f59e0b; font-size: 15px; }
 
-.prodect .stars svg {
-    fill: #f8d941;
-    font-size: 18px;
-}
-
-
-/* Price */
+/* ── Price ── */
 .prodect .price {
-    font-weight: bold;
-    font-size: 20px;
-    margin: 0;
+  font-weight: 700;
+  font-size: 18px;
+  color: var(--accent);
+  margin: 0;
 }
 
+/* ── In-cart status badge ── */
+.prodect .stat_cart {
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 12px;
+  transition: top 0.3s;
+  display: flex;
+  align-items: center;
+  color: var(--text-primary);
+  gap: 4px;
+  white-space: nowrap;
+  background: var(--accent-light);
+  padding: 3px 8px;
+  border-radius: var(--radius-full, 9999px);
+}
 
-/* Action Icons */
+.prodect .stat_cart svg { color: var(--accent); }
+.prodect.in-cart .stat_cart { top: 10px; }
+
+/* ── Action Icons ── */
 .prodect .icons {
-    position: absolute;
-
-    top: 40%;
-    transform: translateY(-50%);
-
-    display: flex;
-    flex-direction: column;
-
-    right: -50px;
-    gap: 10px;
-
-    transition: 0.3s;
+  position: absolute;
+  top: 42%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  right: -48px;
+  gap: 8px;
+  transition: right 0.25s cubic-bezier(0.4,0,0.2,1);
 }
 
-.prodect.in-cart .icons .butn_cart{
-    background: var(--main_color);
+.prodect:hover .icons { right: 10px; }
 
-}
-
-
-.prodect:hover .icons {
-    right: 10px;
-}
-
-
-/* Icon Circle */
 .prodect .icons span {
-    width: 40px;
-    height: 40px;
-
-    background: var(--bg_color);
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    border-radius: 50%;
-
-    cursor: pointer;
-
-    transition: 0.3s;
+  width: 38px;
+  height: 38px;
+  background: var(--surface);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+  box-shadow: var(--shadow-sm);
+  border: 1.5px solid var(--border);
+  color: var(--text-secondary);
 }
-
 
 .prodect .icons span:hover {
-    background: var(--main_color);
-    color: #fff;
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+  box-shadow: 0 4px 12px rgba(37,99,235,0.3);
 }
 
 .prodect .icons span.in-fav {
-    background: var(--main_color) !important;
-    color: #fff !important;
+  background: var(--accent) !important;
+  color: #fff !important;
+  border-color: var(--accent) !important;
 }
 
-.prodect .icons span.in-fav svg {
-    fill: #fff !important;
-    color: #fff !important;
-}
-/* ==========================================
-   Swiper
-   ========================================== */
+.prodect .icons span.in-fav svg { fill: #fff !important; color: #fff !important; }
 
-.slide_products .swiper-slide {
-    display: flex;
-    justify-content: center;
-    padding: 8px 0;
+.prodect.in-cart .icons .butn_cart {
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+  pointer-events: none;
+  opacity: 0.7;
+  cursor: not-allowed;
 }
 
-
-.slide_products .swiper {
-    padding: 5px 5px 15px;
+/* ══════════════════════════════════════
+   Swiper outer wrapper + custom nav
+══════════════════════════════════════ */
+.swiper_outer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
-
-/* ==========================================
-   Responsive
-   ========================================== */
-
-@media (max-width: 768px) {
-
-    .prodect {
-        width: 230px;
-    }
-
+.swiper_outer .mySwiper {
+  flex: 1;
+  min-width: 0;
 }
 
-
-@media (max-width: 500px) {
-
-    .prodect {
-        width: 210px;
-    }
-
+.swiper_nav_btn {
+  flex-shrink: 0;
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--surface);
+  border: 1.5px solid var(--border);
+  border-radius: 50%;
+  cursor: pointer;
+  color: var(--accent);
+  font-size: 22px;
+  box-shadow: var(--shadow-sm);
+  transition: background 0.2s, border-color 0.2s, box-shadow 0.2s, transform 0.15s;
 }
 
-
-/* تصغير حجم وتنسيق أسهم التنقل */
-
-
-
-.slide_products .swiper-button-next::after,
-.slide_products .swiper-button-prev::after {
-    font-size: 10px !important;
-    /* ← غيرتها من 114px إلى 18px */
-    font-weight: bold;
+.swiper_nav_btn:hover {
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+  box-shadow: 0 4px 14px rgba(37,99,235,0.3);
+  transform: scale(1.08);
 }
 
+.swiper_nav_btn:disabled,
+.swiper_nav_btn.swiper-button-disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* hide the default Swiper arrows */
 .slide_products .swiper-button-next,
 .slide_products .swiper-button-prev {
-    width: 28px;
-    height: 28px;
+  display: none;
 }
 
-.slide_products .swiper-button-next::after,
-.slide_products .swiper-button-prev::after {
-    font-size: 6px !important;
-    font-weight: bold;
-   
-}
-.prodect {
-    width: 200px;
-    background: #fff;
-    padding: 20px 15px;
-    border: 1px solid var(--border_color);
-    border-radius: 8px;
-    transition: 0.3s;
-    position: relative;
-    overflow: hidden;
-    box-sizing: border-box;
-    margin: 0;
+.slide_products .swiper-slide {
+  display: flex;
+  justify-content: center;
+  padding: 8px 0;
 }
 
-.prodect .stat_cart{
-    position: absolute;
-    top: -30px;
-    left: 90px;
-    transform: translate(-50%);
-    font-size:13px;
-    transition: 0.3s;
-    display: flex;
-    align-items: center;
-    color: #253237;
-    gap: 5px;
-}
-.prodect .stat_cart svg{
-    color:var(--main_color) ;
-   
-}
+.slide_products .swiper { padding: 6px 0 18px; }
 
-
-.prodect.in-cart .stat_cart{
-   top: 10px; 
-}
-
-/* .prodect.in-cart .icons .butn_cart{
-    background: var(--main_color);
-    pointer-events: none;
-} */
-
-.prodect.in-cart .icons .butn_cart{
-    background: var(--main_color);
-    pointer-events: none;
-    opacity: 0.6; /* اختياري: تعطي إشارة بصرية إنه معطل */
-    cursor: not-allowed;
-}
-
+/* ── Responsive ── */
+@media (max-width: 768px) { .prodect { width: 200px; } }
+@media (max-width: 500px)  { .prodect { width: 185px; } }

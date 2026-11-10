@@ -4,7 +4,7 @@
 
 /* Hero */
 .about_hero {
-  background: #f7f9fb;
+  background: #f1f5f9;
   padding: 60px 0;
   margin-bottom: 60px;
 }
@@ -73,7 +73,7 @@
 
 /* Features */
 .about_features {
-  background: #f7f9fb;
+  background: #f1f5f9;
   padding: 60px 0;
   margin-bottom: 60px;
 }
@@ -87,16 +87,18 @@
 .feature_card {
   flex: 1 1 220px;
   background: #fff;
-  border: 1px solid var(--border_color);
-  border-radius: 10px;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 14px;
   padding: 30px 20px;
   text-align: center;
-  transition: 0.3s;
+  transition: transform 0.22s, box-shadow 0.22s, border-color 0.22s;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
 }
 
 .feature_card:hover {
-  border-color: var(--main_color);
+  border-color: #2563eb;
   transform: translateY(-5px);
+  box-shadow: 0 10px 28px rgba(37,99,235,0.1);
 }
 
 .feature_icon {
@@ -106,8 +108,8 @@
   width: 60px;
   height: 60px;
   border-radius: 50%;
-  background: rgba(0, 144, 240, 0.1);
-  color: var(--main_color);
+  background: #eff6ff;
+  color: #2563eb;
   font-size: 24px;
   margin-bottom: 15px;
 }
@@ -135,12 +137,20 @@
   flex: 1 1 200px;
   text-align: center;
   padding: 25px 15px;
-  border: 1px solid var(--border_color);
-  border-radius: 10px;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 14px;
+  background: #fff;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.stat_card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(37,99,235,0.1);
 }
 
 .stat_icon {
-  color: var(--main_color);
+  color: #2563eb;
   font-size: 26px;
   display: inline-block;
   margin-bottom: 10px;
@@ -148,7 +158,7 @@
 
 .stat_card h3 {
   font-size: 28px;
-  color: var(--main_color);
+  color: #2563eb;
   margin-bottom: 5px;
 }
 
@@ -158,8 +168,10 @@
 
 /* CTA */
 .about_cta {
-  background: var(--main_color);
+  background: #2563eb;
   padding: 50px 0;
+  border-radius: 20px;
+  margin: 0 20px 40px;
 }
 
 .about_cta_inner {

@@ -3,7 +3,7 @@
 }
 
 .blog_hero {
-  background: #f7f9fb;
+  background: #f1f5f9;
   padding: 50px 0;
   margin-bottom: 40px;
   text-align: center;
@@ -38,16 +38,18 @@
 }
 
 .blog_card {
-  border: 1px solid var(--border_color);
-  border-radius: 10px;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 16px;
   overflow: hidden;
-  transition: 0.3s;
+  transition: transform 0.22s, box-shadow 0.22s, border-color 0.22s;
   background: #fff;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
 }
 
 .blog_card:hover {
-  border-color: var(--main_color);
-  transform: translateY(-4px);
+  border-color: #2563eb;
+  transform: translateY(-5px);
+  box-shadow: 0 12px 28px rgba(37,99,235,0.1);
 }
 
 .blog_card_img {
