@@ -36,8 +36,12 @@ body {
   background: var(--bg);
   font-family: "Inter", sans-serif;
   color: var(--text-primary);
-  padding-top: 180px;
+  padding-top: 118px;
   line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  body { padding-top: 100px; }
 }
 
 img { width: 100%; }

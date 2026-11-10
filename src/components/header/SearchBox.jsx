@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { FiSearch } from "react-icons/fi";
+import { IoCloseCircle } from "react-icons/io5";
 import { useNavigate } from "react-router-dom";
 
 function SearchBox() {
@@ -53,6 +54,11 @@ function SearchBox() {
         setSuggestions([]);
     };
 
+    const handleClear = () => {
+        setSerchTerm("");
+        setSuggestions([]);
+    };
+
     return (
       <div className="SearchBox_contaner">
     <form onSubmit={handleSbumit} className="search_box">
@@ -65,6 +71,11 @@ function SearchBox() {
             onChange={(e) => setSerchTerm(e.target.value)}
             autoComplete="off"
         />
+        {serchTerm && (
+            <button type="button" className="search_clear_btn" onClick={handleClear}>
+                <IoCloseCircle />
+            </button>
+        )}
         <button type="submit">
             <FiSearch />
         </button>

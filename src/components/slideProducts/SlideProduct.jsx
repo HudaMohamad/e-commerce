@@ -46,8 +46,13 @@ function SlideProduct({ data, title }) {
             </button>
 
             <Swiper
-              slidesPerView={5}
-              spaceBetween={20}
+              breakpoints={{
+                0:    { slidesPerView: 2, spaceBetween: 12 },
+                480:  { slidesPerView: 2, spaceBetween: 14 },
+                640:  { slidesPerView: 3, spaceBetween: 16 },
+                900:  { slidesPerView: 4, spaceBetween: 18 },
+                1200: { slidesPerView: 5, spaceBetween: 20 },
+              }}
               loop={data.length > 5}
               autoplay={{ delay: 2500, disableOnInteraction: false }}
               navigation={{ prevEl: prevRef.current, nextEl: nextRef.current }}
